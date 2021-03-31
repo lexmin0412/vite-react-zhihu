@@ -20,6 +20,11 @@ export default function HomeIndex() {
 	return (
 		<div className={styles.homeIndexPage}>
 			<div className={styles.listContainer}>
+				<div className={styles.listTitle}>
+					<div className={styles.listTitleText}>
+						推荐
+					</div>
+				</div>
 				{
 					fetchFinished ?
 					<React.Fragment>
