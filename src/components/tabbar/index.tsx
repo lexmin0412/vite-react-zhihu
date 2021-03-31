@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useHistory, useParams, useRouteMatch } from 'react-router-dom'
 import styles from './index.module.css'
 
 const routerList = [
@@ -18,13 +18,17 @@ const routerList = [
 ]
 
 export default function Tabbar() {
+
+	const location = useLocation()
+
 	return (
 		<div className={styles.tabbarComp}>
 			{
-				routerList.map((item)=>{
+				routerList.map((item) => {
+					const isCurLocation = location.pathname  === item.url
 					return (
 						<Link
-							className={styles.tabbarItem}
+							className={`${styles.tabbarItem} ${isCurLocation  ?  styles.current :  ''}`}
 							to={item.url}
 							key={item.url}
 						>

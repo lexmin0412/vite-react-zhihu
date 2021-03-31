@@ -91,4 +91,23 @@ const [ list, setList ] = useState<any[]>([])
 
 表示 `list` 变量类型为 `any[]`, 默认值为 `[]`
 
+8. 通过hook如何获取url相关属性
 
+useLocation相当于 window.location, 可以获取到路径、参数等
+useHistory相当于 window.history, 可以获取当前页面栈信息等
+useRouteMatch 可以获取当前路由的匹配信息
+
+9. 使用css module时如何为元素添加两个类名
+
+```tsx
+import React from 'react'
+
+export default function Index()  {
+	render() {
+		return (
+			<div
+				className={`${styles.tabbarItem} ${styles.current}`}
+			></div>
+	}
+}
+```
