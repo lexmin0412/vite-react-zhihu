@@ -6,6 +6,7 @@ import MsgIndex from './../pages/msg'
 import UserIndex from './../pages/user'
 
 export default <Router basename=''>
+	<Route path="/" component={HomeIndex} />
 	<Route path="/home/index" component={HomeIndex} />
 	<Route path="/msg/index" component={MsgIndex} />
 	<Route path="/user/index" component={UserIndex} />
