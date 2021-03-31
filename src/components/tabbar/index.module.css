@@ -6,6 +6,7 @@
 	height: 100px;
 	display: flex;
 	align-items: center;
+	background-color: #fff;
 }
 
 .tabbar-item  {
@@ -13,4 +14,16 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	color: #333;
+	text-decoration: none;
+}
+
+.tabbar-item:hover,
+.tabbar-item:active,
+.tabbar-item:focus {
+	color: #333;
+}
+
+.current {
+	color: #06f;
 }

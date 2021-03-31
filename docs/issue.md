@@ -82,3 +82,13 @@ module.exports = {
     }
 }
 ```
+
+7. 如何在使用 useState hook时声明数据类型
+
+```tsx
+const [ list, setList ] = useState<any[]>([])
+```
+
+表示 `list` 变量类型为 `any[]`, 默认值为 `[]`
+
+
