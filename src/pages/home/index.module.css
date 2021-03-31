@@ -1,6 +1,3 @@
-.home-index-page {
-}
-
 .list-container {
 	min-height: 100vh;
 	background-color: #eff0f5;
@@ -60,4 +57,15 @@
 	height: 120px;
 	border-radius: 12px;
 	margin-left: 20px;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fill {
+	width: 100%;
+	height: 100vh;
 }
