@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import App from './App'
+import RouteList from './router/index'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+		{RouteList}
   </React.StrictMode>,
   document.getElementById('root')
 )
