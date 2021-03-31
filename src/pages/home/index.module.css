@@ -1,10 +1,10 @@
 .home-index-page {
-
 }
 
 .list-container {
 	min-height: 100vh;
 	background-color: #eff0f5;
+	padding-bottom: 120px;
 }
 
 .list-item {
