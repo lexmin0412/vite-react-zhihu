@@ -15,7 +15,6 @@ export default defineConfig({
 	},
 	server: {
 		proxy: {
-			// '/api': 'https://www.fastmock.site/mock/17ad4659e546df135e2027055aba5443',
 			'/api': {
 				target: 'https://www.fastmock.site/mock/17ad4659e546df135e2027055aba5443',
 				changeOrigin: true,
