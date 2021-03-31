@@ -3,7 +3,7 @@ import Request from './../../utils/request'
 class HomeService {
 	getRecommendList() {
 		return Request({
-			url: '/api/zhihu/home/getRecommendList'
+			url: `${import.meta.env.VITE_API_HOST}/zhihu/home/getRecommendList`
 		})
 	}
 }
