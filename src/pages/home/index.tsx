@@ -3,19 +3,11 @@ import Tabbar from './../../components/tabbar'
 import HomeService from './../../services/zhihu/home'
 import styles from './index.module.css'
 import ReactLoading from 'react-loading';
+import useGetListOnScroll from './../../hooks/useGetListOnScroll'
 
 export default function HomeIndex() {
 
-	const [ list, setList ] = useState<Array<any>>([])
-	const [ fetchFinished, setFetchFinished ] = useState<Boolean>(false)
-
-	useEffect(() => {
-		HomeService.getRecommendList().then((res: any)=>{
-			console.log('请求结果', res)
-			setList(res)
-			setFetchFinished(true)
-		})
-	}, []);
+	const [list, fetchFinished] = useGetListOnScroll(HomeService.getRecommendList)
 
 	return (
 		<div className={styles.homeIndexPage}>
@@ -29,10 +21,10 @@ export default function HomeIndex() {
 					fetchFinished ?
 					<React.Fragment>
 							{
-								list.map((item: any) => {
+								list.map((item: any, index) => {
 									return (
 										<div className={styles.listItem}
-											key={item.id}
+											key={`${item.id}${index}`}
 										>
 											<div className={styles.itemTop}>
 												<img className={styles.itemHeadImg} src={item.headimg} />
