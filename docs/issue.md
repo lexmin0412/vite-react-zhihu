@@ -14,7 +14,7 @@
 
 ```tsx
 ReactDOM.render(
-	<Router basename='vite-react-app'>
+	<Router basename='vite-react-zhihu'>
 		<Route path="/home/index" component={HomeIndex} />
 		<Route path="/msg/index" component={MsgIndex} />
 		<Route path="/user/index" component={UserIndex} />

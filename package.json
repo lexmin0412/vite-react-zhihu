@@ -1,8 +1,8 @@
 {
-  "name": "vite-react-app",
+  "name": "vite-react-zhihu",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://lexmin0412.github.io/vite-react-app",
+  "homepage": "https://lexmin0412.github.io/vite-react-zhihu",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
