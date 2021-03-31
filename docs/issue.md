@@ -52,4 +52,33 @@ export default function Tabbar() {
 
 4. 模拟接口使用[fastmock](https://www.fastmock.site/#/project/17ad4659e546df135e2027055aba5443)实现
 
+5. [使用vercel部署服务端应用](https://blog.csdn.net/u012961419/article/details/112369710)
 
+6. 移动端适配
+
+`npm i amfe-flexible autprefixer postcss-pxtorem -D`
+
+根目录下新建 postcss.config.css，添加如下内容：
+
+```js
+module.exports = {
+    plugins: {
+        autoprefixer: {
+            overrideBrowserslist: [
+                "Android 4.1",
+                "iOS 7.1",
+                "Chrome > 31",
+                "ff > 31",
+                "ie >= 8",
+                "last 10 versions", // 所有主流浏览器最近10版本用
+            ],
+            grid: true,
+        },
+        'postcss-pxtorem': {
+            rootValue: 37.5,
+            propList: ['*'],
+            unitPrecision: 5
+        }
+    }
+}
+```
