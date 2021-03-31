@@ -5,6 +5,9 @@ import reactRefresh from '@vitejs/plugin-react-refresh'
 export default defineConfig({
   plugins: [reactRefresh()],
   base: '/vite-react-app/',
+	build: {
+		outDir:  './public'
+	},
 	css:{
 		modules: {  // css module配置
 			localsConvention: 'camelCaseOnly'  // 如果类名为  .tab-item, 使用时要写成 styles.tabItem
