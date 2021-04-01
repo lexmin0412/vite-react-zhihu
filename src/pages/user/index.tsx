@@ -7,7 +7,7 @@ export default function UserIndex() {
 
 	useEffect(()=>{
 		Request({
-			url: `${process.env.VITE_NETEASE_API}/topic/detail?actid=111551188`
+			url: `${import.meta.env.VITE_NETEASE_API}/topic/detail?actid=111551188`
 		}).then((res)=>{
 			console.log('请求结果', res)
 		})
