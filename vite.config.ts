@@ -4,7 +4,7 @@ import reactRefresh from '@vitejs/plugin-react-refresh'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [reactRefresh()],
-	base: '/vite-react-zhihu/',
+	base: '/',
 	build: {
 		outDir:  './dist'
 	},

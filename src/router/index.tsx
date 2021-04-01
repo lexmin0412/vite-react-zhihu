@@ -5,7 +5,7 @@ import HomeIndex from './../pages/home'
 import MsgIndex from './../pages/msg'
 import UserIndex from './../pages/user'
 
-export default <Router basename='vite-react-zhihu'>
+export default <Router basename=''>
 	<Route path="/" exact component={HomeIndex} />
 	<Route path="/home/index" component={HomeIndex} />
 	<Route path="/msg/index" component={MsgIndex} />
