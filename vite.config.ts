@@ -19,7 +19,12 @@ export default defineConfig({
 				target: 'https://www.fastmock.site/mock/17ad4659e546df135e2027055aba5443',
 				changeOrigin: true,
 				rewrite: (path) => path.replace(/^\/api/, '')
-			}
+			},
+			'/netease_api': {
+				target: 'https://netease-cloud-music-api-orcin.vercel.app',
+				changeOrigin: true,
+				rewrite: (path) => path.replace(/^\/netease_api/, '')
+			},
 		}
 	}
 })
