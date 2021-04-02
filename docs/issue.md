@@ -111,3 +111,13 @@ export default function Index()  {
 	}
 }
 ```
+
+10. github推送代码失败解决方法
+
+https://www.codeprj.com/blog/900a361.html
+
+11. mac刷新dns缓存
+
+```bash
+sudo killall -HUP mDNSResponder
+```
