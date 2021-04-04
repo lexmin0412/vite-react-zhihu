@@ -27,5 +27,5 @@
 
 .current {
 	font-weight: 700;
-	color: #06f;
+	color: var(--themeColor);
 }

@@ -5,7 +5,7 @@ import RouteList from './router/index'
 
 ReactDOM.render(
   <React.StrictMode>
-		{RouteList}
+		<RouteList/>
   </React.StrictMode>,
   document.getElementById('root')
 )
