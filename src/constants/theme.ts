@@ -15,6 +15,10 @@ export const themeList: Array<ITheme> = [
 		hex: '#06f'
 	},
 	{
+		titleZh: '掘金蓝',
+		hex: '#007fff',
+	},
+	{
 		titleZh: '美团黄',
 		hex: '#FFC300'
 	},
@@ -25,5 +29,13 @@ export const themeList: Array<ITheme> = [
 	{
 		titleZh: '京东到家绿',
 		hex: '#25c156'
+	},
+	{
+		titleZh: '微信绿',
+		hex: '#0FBE5D'
+	},
+	{
+		titleZh: '思否绿',
+		hex: '#009a61'
 	}
 ]
