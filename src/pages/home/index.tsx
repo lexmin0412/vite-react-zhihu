@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, {useContext} from 'react'
+import ReactLoading from 'react-loading';
+
 import Tabbar from './../../components/tabbar'
 import HomeService from './../../services/zhihu/home'
 import styles from './index.module.css'
-import ReactLoading from 'react-loading';
 import useGetListOnScroll from './../../hooks/useGetListOnScroll'
+import { ThemeContext } from './../../contexts/index'
 
 export default function HomeIndex() {
 
 	const [list, fetchFinished] = useGetListOnScroll(HomeService.getRecommendList)
+	const { value: themeValue } = useContext(ThemeContext)
 
 	return (
 		<div className={styles.homeIndexPage}>
@@ -55,7 +58,7 @@ export default function HomeIndex() {
 					</React.Fragment>
 						:
 						<div className={`${styles.flex} ${styles.fill}`}>
-							<ReactLoading type='spokes' color='#06f' height={40} width={40} />
+							<ReactLoading type='spokes' color={themeValue.hex} height={40} width={40} />
 						</div>
 				}
 			</div>
