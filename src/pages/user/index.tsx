@@ -5,8 +5,7 @@ import Tabbar from './../../components/tabbar'
 import styles from './index.module.css'
 import { ThemeContext } from './../../contexts'
 import { themeList, ITheme } from './../../constants/theme'
-import {useModal} from './../../components/modal/useModal'
-import Notification, { useNotify } from './../../components/notification/index'
+import { useNotify } from './../../components/notification/index'
 
 export default function UserIndex() {
 
