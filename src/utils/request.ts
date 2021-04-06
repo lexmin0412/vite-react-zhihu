@@ -9,7 +9,10 @@ const request = (params: {
 	return new Promise((resolve, reject) => {
 		fetch(url, {
 			method,
-			body: JSON.stringify(body)
+			body: JSON.stringify(body),
+			headers: {
+				'Content-Type': 'application/json'
+			}
 		})
 		.then(function (response) {
 			return response.json();
