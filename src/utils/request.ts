@@ -1,9 +1,16 @@
 const request = (params: {
 	url: string
+	method: 'get' | 'post' | 'put' | 'delete'
+	body: any
 }) => {
-	const { url } = params
+	const { url, method, body } = params
+
+	// 原生fetch封装
 	return new Promise((resolve, reject) => {
-		fetch(url)
+		fetch(url, {
+			method,
+			body: JSON.stringify(body)
+		})
 		.then(function (response) {
 			return response.json();
 		})
