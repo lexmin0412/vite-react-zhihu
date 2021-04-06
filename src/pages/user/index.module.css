@@ -29,6 +29,7 @@
 
 .current-theme {
 	font-size: 36px;
+	color: var(--themeColor);
 }
 
 .theme-list {

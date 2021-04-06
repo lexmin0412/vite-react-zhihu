@@ -10,8 +10,8 @@ export default function UserIndex() {
 	console.log('当前主题', themeValue.titleZh)
 
 	const toggleTheme = (item: ITheme) => {
-		console.log('toggleTheme', item)
 		setTheme(item)
+		console.log('切换主题', item)
 	}
 
 	return (
