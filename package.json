@@ -9,6 +9,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "dayjs": "^1.10.4",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-loading": "^2.0.3",

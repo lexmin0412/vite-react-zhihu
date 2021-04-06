@@ -1,0 +1,24 @@
+.notify-portal-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px 20px;
+	background-color: var(--themeColor);
+	font-size: 24px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.notify-portal-content {
+	flex: 1;
+	overflow: hidden;
+}
+
+.notify-portal-close {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

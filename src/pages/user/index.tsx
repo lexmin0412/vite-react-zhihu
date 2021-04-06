@@ -1,8 +1,12 @@
-import React, { useContext } from 'react'
+import React, {useContext, useEffect } from 'react'
+import dayjs from 'dayjs'
+
 import Tabbar from './../../components/tabbar'
 import styles from './index.module.css'
 import { ThemeContext } from './../../contexts'
 import { themeList, ITheme } from './../../constants/theme'
+import {useModal} from './../../components/modal/useModal'
+import Notification, { useNotify } from './../../components/notification/index'
 
 export default function UserIndex() {
 
@@ -14,8 +18,22 @@ export default function UserIndex() {
 		console.log('切换主题', item)
 	}
 
+	const { show, RenderNotification } = useNotify()
+
+	useEffect(() => {
+		show()
+	}, [])
+
+
+	const timeStr = dayjs().format('YYYY年MM月DD日')
+
 	return (
 		<div className={styles.userIndexPage}>
+			<RenderNotification>
+				<React.Fragment>
+					今天是{timeStr}, 祝大家牛年大吉啦
+				</React.Fragment>
+			</RenderNotification>
 			<div className={styles.userMain}>
 				<div className={styles.userInfo}>
 					<img className={styles.userHeadImg} />
