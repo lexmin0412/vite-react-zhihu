@@ -1,0 +1,33 @@
+.list-title {
+	font-size: 36px;
+	font-weight: 700;
+	color: var(--themeColor);
+	height: 100px;
+	line-height: 100px;
+	padding-left: 20px;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	/* box-shadow: 0px 0px 2px 1px #eff0f5; */
+}
+
+.list-title-text {
+	position: relative;
+}
+
+.list-title-text::after {
+	position: absolute;
+	bottom: 0;
+	width: 56px;
+	display: block;
+	content: '';
+	height: 10px;
+	background-color: var(--themeColor);
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 5px;
+}
