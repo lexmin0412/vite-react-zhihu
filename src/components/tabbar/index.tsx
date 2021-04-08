@@ -38,6 +38,7 @@ export default function Tabbar() {
 							className={`${styles.tabbarItem} ${isCurLocation  ?  styles.current :  ''}`}
 							to={item.url}
 							key={item.url}
+							replace
 						>
 							<div className={styles.icon}>
 								{isCurLocation ? item.selectedIcon() : item.icon()}
