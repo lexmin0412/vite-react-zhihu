@@ -1,4 +1,5 @@
 import React, {useContext, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import dayjs from 'dayjs'
 
 import Tabbar from './../../components/tabbar'
@@ -8,6 +9,8 @@ import { themeList, ITheme } from './../../constants/theme'
 import { useNotify } from './../../components/notification/index'
 
 export default function UserIndex() {
+
+
 
 	const { value: themeValue, setTheme} = useContext(ThemeContext)
 	console.log('当前主题', themeValue.titleZh)
@@ -19,7 +22,14 @@ export default function UserIndex() {
 
 	const { show, RenderNotification } = useNotify()
 
+	const history = useHistory()
+
 	useEffect(() => {
+		const userToken = localStorage.getItem('vite-react-zhihu-user-token')
+		console.log('userToken', userToken)
+		if (!userToken) {
+			history.push('/login/index')
+		}
 		show()
 	}, [])
 

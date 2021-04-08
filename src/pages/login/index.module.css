@@ -1,0 +1,55 @@
+.login-index-container {
+
+}
+
+.main {
+	padding: 160px 80px;
+}
+
+.title {
+	font-size: 64px;
+	color: #333;
+	font-weight: 700;
+	margin-bottom: 240px;
+}
+
+.field-box {
+	display: flex;
+	margin-bottom: 60px;
+	border-bottom: 1px solid #eff0f5;
+}
+
+.label {
+	color: #333;
+	font-weight: 700;
+	height: 120px;
+	line-height: 120px;
+	margin-right: 20px;
+	font-size: 40px;
+}
+
+input {
+	flex: 1;
+	display: block;
+	height: 120px;
+	line-height: 120px;
+	border: 0;
+	background: #fff !important;
+	outline: 0;
+	font-size: 40px;
+}
+
+.submit-btn {
+	width: 480px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	border-radius: 50px;
+	display: block;
+	margin: 100px auto;
+	color: #fff;
+	background-color: var(--themeColor);
+	outline: 0;
+	border: 0;
+	font-size: 36px;
+}
