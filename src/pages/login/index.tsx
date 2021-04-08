@@ -1,5 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+import useSetMeta from './../../hooks/useSetMeta'
 import styles from './index.module.css'
 
 import Form, { Field, useForm } from './../../components/form/index'
@@ -7,6 +8,7 @@ import Form, { Field, useForm } from './../../components/form/index'
 export default function LoginIndex() {
 	const [ form ] = useForm()
 	const history = useHistory()
+	useSetMeta({title: '登录'})
 	const onFinish = (res: any) => {
 		console.log('onfinish',res)
 		localStorage.setItem('vite-react-zhihu-user-token', res.userName)

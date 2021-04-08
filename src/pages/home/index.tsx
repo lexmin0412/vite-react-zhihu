@@ -5,12 +5,14 @@ import Tabbar from './../../components/tabbar'
 import HomeService from './../../services/zhihu/home'
 import styles from './index.module.css'
 import useGetListOnScroll from './../../hooks/useGetListOnScroll'
+import useSetMeta from './../../hooks/useSetMeta'
 import { ThemeContext } from './../../contexts/index'
 
 export default function HomeIndex() {
 
 	const [list, fetchFinished] = useGetListOnScroll(HomeService.getRecommendList)
-	const { value: themeValue } = useContext(ThemeContext)
+	const {value: themeValue} = useContext(ThemeContext)
+	useSetMeta({title: '首页'})
 
 	return (
 		<div className={styles.homeIndexPage}>

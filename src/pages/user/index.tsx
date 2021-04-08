@@ -6,9 +6,11 @@ import Tabbar from './../../components/tabbar'
 import styles from './index.module.css'
 import { ThemeContext } from './../../contexts'
 import { themeList, ITheme } from './../../constants/theme'
-import { useNotify } from './../../components/notification/index'
+import {useNotify} from './../../components/notification/index'
+import useSetMeta from './../../hooks/useSetMeta'
 
 export default function UserIndex() {
+	useSetMeta({title: '我的'})
 
 	const [ userName, setUserName ] = useState('火星用户')
 
