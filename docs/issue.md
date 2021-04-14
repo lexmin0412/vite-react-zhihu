@@ -121,3 +121,49 @@ https://www.codeprj.com/blog/900a361.html
 ```bash
 sudo killall -HUP mDNSResponder
 ```
+
+12. husky 6.0钩子不生效的问题
+
+安装husky
+
+```bash
+npm install husky --save-dev
+```
+
+使git钩子生效：
+
+```bash
+npx husky install
+```
+
+
+
+在 package.json 中添加 scripts 配置：
+
+```json
+{
+	"scripts": {
+		"prepare": "husky install"
+	}
+}
+```
+
+使用commitlint检查commit log:
+
+```json
+{
+	"scripts": {
+		"commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+	}
+}
+```
+
+然后添加husky文件生成配置：
+
+```bash
+npx husky add .husky/commit-msg "commitlint -e $HUSKY_GIT_PARAMS"
+```
+
+在根目录的 .husky 文件夹下会生成 commit-msg 文件。
+
+然后再执行 git commit，钩子就会生效了。
