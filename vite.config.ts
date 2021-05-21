@@ -25,6 +25,11 @@ export default defineConfig({
 				changeOrigin: true,
 				rewrite: (path) => path.replace(/^\/netease_api/, '')
 			},
+			'/github_api': {
+				target: 'https://api.github.com',
+				changeOrigin: true,
+				rewrite: path => path.replace(/^\/github_api/, '')
+			}
 		}
 	}
 })
