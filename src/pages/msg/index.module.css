@@ -31,3 +31,11 @@
 	transform: translateX(-50%);
 	border-radius: 5px;
 }
+
+.list-container {
+	margin-top: 40px;
+}
+
+.list-item {
+	padding: 10px 20px;
+}

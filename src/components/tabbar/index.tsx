@@ -12,7 +12,7 @@ const routerList = [
 	},
 	{
 		url: '/msg/index',
-		title: '消息',
+		title: '仓库',
 		icon: () => <Icon name='Msg' />,
 		selectedIcon: () => <Icon name='MsgSelected' />
 	},
